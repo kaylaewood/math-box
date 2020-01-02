@@ -7,13 +7,15 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      expressions: []
+      solutions: []
     }
   }
 
-  addExpression = (expression) => {
+  addExpression = async (expression) => {
+    const response = await fetch(`https://newton.now.sh/simplify/${expression}`);
+    const data = await response.json();
     this.setState({
-      expressions: [...this.state.expressions, expression]
+      solutions: [...this.state.solutions, {expression: data.expression, answer: data.result}]
     })
   }
 
@@ -22,7 +24,7 @@ class App extends Component {
       <main>
       <header>Math Box</header>
       <Form addExpression={this.addExpression}/>
-      <Container expressions={this.state.expressions}/>
+      <Container solutions={this.state.solutions}/>
       </main>
     );
   }

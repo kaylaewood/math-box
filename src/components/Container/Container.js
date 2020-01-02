@@ -2,14 +2,12 @@ import React from 'react';
 import './Container.css';
 import MathCard from '../MathCard/MathCard';
 
-function Container({ expressions }) {
-  const createCards = expressions.map(expression => {
-    fetch(`https://newton.now.sh/simplify/${expression}`)
-      .then(response => response.json())
-      .then(data => console.log(data.result))
+function Container({ solutions }) {
+
+  const createCards = solutions.map(solution => {
       return <MathCard
-        expression={expression}
-        // answer={answer}
+        expression={solution.expression}
+        answer={solution.answer}
       />
   });
 
