@@ -5,13 +5,15 @@ class Form extends Component {
   constructor() {
     super();
     this.state = {
-      title: 'form!'
+
     }
   }
   render() {
     return (
       <form>
-      <p>This is a {this.state.title}</p>
+        <p>Type your expression here:</p>
+        <input type='text' placeholder='example: 8(4)+9^2' />
+        <button id='calculate-button'>Calculate!</button>
       </form>
     );
   }
