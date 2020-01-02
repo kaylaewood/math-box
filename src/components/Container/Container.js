@@ -3,13 +3,13 @@ import './Container.css';
 import MathCard from '../MathCard/MathCard';
 
 function Container() {
+  const createCards = () => {
+    
+  }
+
   return (
     <div className='container'>
-      <MathCard />
-      <MathCard />
-      <MathCard />
-      <MathCard />
-      <MathCard />
+      {createCards()}
     </div>
   );
 }

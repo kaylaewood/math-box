@@ -7,16 +7,22 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-
+      expressions: []
     }
   }
-  
+
+  addExpression = (expression) => {
+    this.setState({
+      expressions: [...this.state.expressions, expression]
+    })
+  }
+
   render() {
     return (
       <main>
       <header>Math Box</header>
-      <Form />
-      <Container />
+      <Form addExpression={this.addExpression}/>
+      <Container expressions={this.state.expressions}/>
       </main>
     );
   }
