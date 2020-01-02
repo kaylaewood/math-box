@@ -1,0 +1,11 @@
+.math-card {
+  margin: 2vw;
+  padding: 1vw;
+  border: 2px solid black;
+  text-align: center;
+}
+
+#delete-card-button {
+  width: 100%;
+  margin: 0;
+}

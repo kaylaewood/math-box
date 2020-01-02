@@ -11,7 +11,6 @@ class Form extends Component {
   render() {
     return (
       <form>
-        <p>Type your expression here:</p>
         <input type='text' placeholder='example: 8(4)+9^2' />
         <button id='calculate-button'>Calculate!</button>
       </form>

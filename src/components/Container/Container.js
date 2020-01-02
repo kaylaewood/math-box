@@ -4,10 +4,13 @@ import MathCard from '../MathCard/MathCard';
 
 function Container() {
   return (
-    <form>
-      <p>This is a Container</p>
+    <div className='container'>
       <MathCard />
-    </form>
+      <MathCard />
+      <MathCard />
+      <MathCard />
+      <MathCard />
+    </div>
   );
 }
 
