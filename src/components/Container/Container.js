@@ -2,14 +2,14 @@ import React from 'react';
 import './Container.css';
 import MathCard from '../MathCard/MathCard';
 
-function Container() {
-  const createCards = () => {
-    
-  }
+function Container({ expressions }) {
+  const createCards = expressions.map(expression => {
+      return <MathCard expression={expression}/>
+  });
 
   return (
     <div className='container'>
-      {createCards()}
+      {createCards}
     </div>
   );
 }
