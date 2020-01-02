@@ -1,16 +1,25 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './App.css';
 import Form from '../Form/Form';
 import Container from '../Container/Container';
 
-function App() {
-  return (
-    <main>
+class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+
+    }
+  }
+  
+  render() {
+    return (
+      <main>
       <header>Math Box</header>
       <Form />
       <Container />
-    </main>
-  );
+      </main>
+    );
+  }
 }
 
 export default App;
