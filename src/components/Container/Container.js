@@ -4,7 +4,13 @@ import MathCard from '../MathCard/MathCard';
 
 function Container({ expressions }) {
   const createCards = expressions.map(expression => {
-      return <MathCard expression={expression}/>
+    fetch(`https://newton.now.sh/simplify/${expression}`)
+      .then(response => response.json())
+      .then(data => console.log(data.result))
+      return <MathCard
+        expression={expression}
+        // answer={answer}
+      />
   });
 
   return (
