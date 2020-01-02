@@ -16,6 +16,13 @@ class Form extends Component {
   sendExpression = e => {
     e.preventDefault();
     this.props.addExpression(this.state.input);
+    this.resetForm();
+  }
+
+  resetForm = () => {
+    this.setState({
+      input: ''
+    })
   }
 
   render() {
